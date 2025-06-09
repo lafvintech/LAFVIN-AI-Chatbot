@@ -45,10 +45,8 @@ Therefore, you need to decide whether to continue with this project or ensure yo
    * - .. figure:: img/flashtool1.png
           :width: 100%
 
-     - .. figure:: img/flashtool2.png
-          :width: 100%
 
-2. 按照以下步骤上传固件：
+1. 按照以下步骤上传固件：
 
    A. 点击"选择文件"按钮选择您下载的固件文件（.bin格式）
    B. 在bin文件选择框后的地址输入框中，输入``0或0x0``（表示固件将被下载到开发板内存的起始位置）
@@ -56,19 +54,18 @@ Therefore, you need to decide whether to continue with this project or ensure yo
    D. 设置波特率（这里我们使用465800）
    E. 点击"开始"按钮开始将固件下载到ESP32-S3开发板
 
-   .. figure:: img/flashtool3.png
+   .. figure:: img/flashtool2.png
       :align: center
       :width: 80%
 
-   .. figure:: img/flashtool5.png
+   .. figure:: img/flash_gpt.png
       :align: center
       :width: 80%
 
-3. 下载完成后，按下开发板上的RST按钮。开发板将自动重启并进入网络配置模式
-4. 将您的手机连接到名为Xiaozhi-XXXX的热点。配置页面应该会自动打开。如果没有，您可以在浏览器中手动输入``http://192.168.4.1``访问配置界面
-5. 选择您的WiFi网络并输入密码进行连接
-6. 开发板将自动重启，连接到您的WiFi，并播报一个6位验证码
-7. 添加设备：
-   * 输入设备播报的6位验证码
-   * 点击"添加设备"按钮
-   * 重启开发板以完成设备绑定
+2. 下载完成后，按下开发板上的RST按钮。开发板将自动重启并进入网络配置模式并在屏幕显示配置AP和密码
+   .. image:: img/wificonfig_gpt.png
+3. 将您的手机连接到名为ESP32_Config的热点。您可以在浏览器中手动输入``http://192.168.4.1``访问配置界面
+4. 选择您的WiFi网络并输入密码并填写APIkey(这里的网络需要可以正常连接到openai的服务器)
+5. 开发板将自动重启，连接到您的WiFi,并自动连接AI服务(如果超过30s没有重启可以重新按下RST键)
+
+.. image:: img/main_gpt.png

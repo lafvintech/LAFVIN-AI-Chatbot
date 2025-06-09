@@ -8,10 +8,10 @@
 烧录软件和Bin文件下载
 ------------------------------------------
 
-.. figure:: img/download2.png
+.. figure:: img/download.png
    :align: center
 
-1. 您可以访问我们的仓库：`GitHub仓库 <https://github.com/Hosyond/AIChatBot>`_ 或直接从此链接下载zip包：`文件下载 <https://codeload.github.com/Hosyond/AIChatBot/zip/refs/heads/main>`_
+1. 您可以访问我们的仓库：`GitHub仓库 <https://https://github.com/lafvintech/LAFVIN-AI-Chatbot>`_ 或直接从此链接下载zip包：`文件下载 <https://codeload.github.com/lafvintech/LAFVIN-AI-Chatbot/zip/refs/heads/main>`_
 2. 下载的zip包包含最新的bin固件、烧录工具和驱动程序
 3. 将下载的固件文件保存在您计算机上容易访问的位置
 
