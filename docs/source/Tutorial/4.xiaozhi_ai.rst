@@ -9,9 +9,7 @@ This project is based on `xiaozhi-esp32 <https://github.com/78/xiaozhi-esp32/blo
 Backend Setup
 ==============================================
 
-To make the ESP32S3 AI Chatbot work properly, you need to register a backend management account and obtain an API key.
-
-1. First, We Need to Register an Account
+First, We Need to Register an Account
 ------------------------------------------
 
 1. Visit the AI Chatbot Management System: `Xiaozhi.me <https://xiaozhi.me>`_
@@ -111,6 +109,7 @@ Firmware Upload
 5. Select your WiFi network and enter the password to connect
 6. The board will automatically restart, connect to your WiFi, and announce a 6-digit verification code
 7. Go to the backend interface. add the device in the Agent you just created:
+
    * Enter the 6-digit verification code announced by the device
    * Click the "Add Device" button
    * Restart the development board to complete device binding
