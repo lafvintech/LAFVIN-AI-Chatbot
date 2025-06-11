@@ -1,20 +1,19 @@
 .. _software_preparation:
 
-软件准备
+Software Preparation
 ======================
 
-本节将指导您下载和烧录ESP32S3 AI Chatbot 所需的软件和固件。
+This section will guide you through downloading and flashing the software and firmware required for the ESP32S3 AI Chatbot.
 
-烧录软件和Bin文件下载
+Flashing Software and Bin File Download
 ------------------------------------------
 
 .. figure:: img/download.png
    :align: center
 
-1. 您可以访问我们的仓库：`GitHub仓库 <https://https://github.com/lafvintech/LAFVIN-AI-Chatbot>`_ 或直接从此链接下载zip包：`文件下载 <https://codeload.github.com/lafvintech/LAFVIN-AI-Chatbot/zip/refs/heads/main>`_
-2. 下载的zip包包含最新的bin固件、烧录工具和驱动程序
-3. 将下载的固件文件保存在您计算机上容易访问的位置
+1. You can visit our repository: `GitHub Repository <https://https://github.com/lafvintech/LAFVIN-AI-Chatbot>`_  or directly download the zip package from this link: `<https://codeload.github.com/lafvintech/LAFVIN-AI-Chatbot/zip/refs/heads/main>`_
+2. The downloaded zip package includes the latest bin firmware, flashing tool, and drivers.
+3. Save the downloaded firmware files to a location on your computer that is easy to access.
 
-在烧录之前，让我们确保驱动程序已正确安装。
-
-请参考 :ref:`install_driver` 获取驱动程序安装说明。
+Before flashing, let's ensure that the drivers are correctly installed.
+Please refer to :ref:`install_driver` for driver installation instructions.

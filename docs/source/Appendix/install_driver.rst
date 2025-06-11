@@ -3,112 +3,64 @@
 Driver Installation
 =========================
 
-Installing the CH343 Driver
-------------------------------------------
-
-Windows
+Windows System
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Check Whether CH343 Has Been Installed**
+**Check If CP210X Is Already Installed**
 
-ESP32-S3 uses CH343 to download codes. Before using it, we need to install the CH343 driver on our computers.
+ESP32-S3 uses CP210X for code downloading. Before using it, we need to install the CP210X driver on our computer.
 
 1. Connect your computer and ESP32-S3 with a USB cable (connect to the port indicated by the red arrow)
 
 .. figure:: img/esp32s3.png
    :align: center
 
-2. Turn to the main interface of your computer, select "This PC" and right-click to select "Manage".
+2. Go to your computer's main interface, select "This PC" and right-click to select "Manage".
 
-.. figure:: img/driver_5.png
+.. figure:: img/driver1.png
    :align: center
 
-3. Click "Device Manager". If your computer has installed CH343, you can see "USB-Enhances-SERIAL CH343 (COMx)". You can then proceed to the next step.
+3. Click "Device Manager". If your computer has already installed CP210X, you will see "USB-Enhances-SERIAL CP210X (COMx)". You can then proceed to the next step.
 
-.. figure:: img/driver_6.png
+.. figure:: img/driver2.png
    :align: center
 
-**Installing CH343**
+**Installing CP210X**
 
-1. First, download the CH343 driver. Click `HERE <http://www.wch-ic.com/search?t=all&q=ch343>`_ to download the appropriate one based on your operating system. 
+1. First, download the CP210X driver. Click `here <https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers>`_ to download the appropriate driver for your operating system.
 
-.. figure:: img/driver_7.png
+.. figure:: img/driver3.png
    :align: center
 
-If you do not want to download the installation package from the website, you can open "AIChatBot/CH343", as we have prepared the installation package.
+If you don't want to download the installation package from the website, you can open "LAFVIN-AI-Chatbot/CP210X", as we have already prepared the installation package.
 
-.. figure:: img/driver_8.png
+You can install it following the video below
+
+.. video:: img/driver_ins.mp4
+    :width: 100%
+
+.. _macos_upload:
+
+MacOS Firmware Upload
+---------------------------
+
+1. First, find the macos folder in the Github repository
+
+.. figure:: img/macos0.png
    :align: center
 
-2. Open the folder "AIChatBot/CH343/Windows/".
+2. We have prepared the flashing tools and files for macos in this folder
 
-.. figure:: img/driver_9.png
+.. figure:: img/macos1.png
    :align: center
 
-3. Double click "CH343SER.EXE".
+3. You only need to open the terminal, then enter python3 mac.py, and this interface will appear
 
-.. figure:: img/driver_10.png
+4. Then press and hold the boot button of the ESP32S3, insert the Type-C data cable, and press Enter to select the AI firmware you want
+
+.. figure:: img/macos2.png
    :align: center
 
-4. Click "INSTALL" and wait for the installation to complete.
-
-.. figure:: img/driver_11.png
-   :align: center
-
-5. Installation successful. Close all interfaces.
-
-.. figure:: img/driver_12.png
-   :align: center
-
-6. When ESP32-S3 is connected to the computer, select "This PC", right-click to select "Manage" and click "Device Manager" in the newly pop-up dialog box, and you can see the following interface.
-
-.. figure:: img/driver_6.png
-   :align: center
-
-7. So far, CH343 has been installed successfully. Close all dialog boxes.
-
-MacOS
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-1. First, download the CH343 driver. Click `HERE <http://www.wch-ic.com/search?t=all&q=ch343>`_ to download the appropriate one based on your operating system. 
-
-.. figure:: img/driver_7.png
-   :align: center
-
-2. If you do not want to download the installation package from the website, you can open "AIChatBot/CH343", as we have prepared the installation package. Open the folder "AIChatBot/CH343/MAC/".
-
-.. figure:: img/driver_13.png
-   :align: center
-
-3. Click "Continue".
-
-.. figure:: img/driver_14.png
-   :align: center
-
-4. Click "Install".
-
-.. figure:: img/driver_15.png
-   :align: center
-
-5. Wait for the installation to finish.
-
-.. figure:: img/driver_16.png
-   :align: center
-
-6. Finally, restart your computer.
-
-.. figure:: img/driver_17.png
-   :align: center
-
-If you still haven't installed the CH343 by following the steps above, you can view readme.pdf for additional installation instructions.
-
-.. figure:: img/driver_18.png
-   :align: center
-
-System Requirements
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Windows - Win 10 and newer, 64 bits
-* Linux - 64 bits
-* Mac OS Intel - Version 10.14: "Mojave" or newer, 64 bits
-* Mac OS Apple Silicon - Version 11: "Big Sur" or newer, 64 bits
+5. Then click confirm, and the program will automatically complete the flashing process for you
+6. After flashing is complete, press the reset button on the ESP32S3, and wait for the device to restart
+7. After restarting, follow :ref:`xiaozhi_conf <xiaozhi_conf>` or :ref:`chatgpt_conf <chatgpt_conf>` for network API configuration and adding the device in the backend

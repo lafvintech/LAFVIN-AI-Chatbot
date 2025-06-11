@@ -1,122 +1,119 @@
 .. _features_usage:
 
-使用指南
-===========
+Usage Guide
+=============
 
-本节将详细介绍ESP32S3 AI聊天机器人的功能和使用方法。
+This section will introduce in detail the features and usage methods of the ESP32S3 AI Chatbot.
 
-语音交互
+Voice Interaction
 ------------------------------------------
 
-ESP32S3 AI聊天机器人的核心功能是语音交互。您可以通过以下方式与机器人进行交流：
+The core functionality of the ESP32S3 AI Chatbot is voice interaction. You can communicate with the robot in the following ways:
 
-**唤醒方式**
+**Wake-up Methods**
 
-1. 唤醒词触发：
+1. Wake Word Trigger:
    
-   * 默认唤醒词为"Hi ESP"
-   * 说出唤醒词后，AI机器人将会回应您
-   * 唤醒后，大约有5秒的等待时间来接收您的问题或命令
-   * ChatGPT不用提醒词唤醒,可以直接对话,支持中途打断
+   * The default wake word is "Hi ESP"
+   * After saying the wake word, the AI-Bot will respond to you
+   * After waking up, there is approximately a 5-second waiting time to receive your question or command
+   * ChatGPT version doesn't require a wake word, you can talk directly, and both versions support mid-conversation interruption
 
-**对话能力**
+**Conversation Capabilities**
 
-ESP32S3 AI聊天机器人支持以下类型的对话：
+The ESP32S3 AI Chatbot supports the following types of conversations:
 
-1. 一般问答：回答关于日常生活和百科知识的问题
+1. General Q&A: Answers questions about daily life and encyclopedic knowledge
 
-2. 信息查询：天气、新闻、日期和时间等
+2. Information Queries: Weather, news, date and time, etc.
 
-3. 娱乐互动：讲笑话、故事、谜语等
+3. Entertainment Interaction: Telling jokes, stories, riddles, etc.
 
-4. 个性化服务：根据您的使用习惯提供定制化回答
+4. Personalized Services: Provides customized answers based on your usage habits
 
-**语音质量**
+**Voice Quality**
 
-1. 麦克风拾音范围：约2-3米
+1. Microphone pickup range: Approximately 2-3 meters
 
-2. 扬声器音量：可通过后端调节（1-100，10个等级）
+2. Noise suppression: Built-in algorithm can filter environmental noise
 
-3. 降噪：内置算法可以过滤环境噪音
+LCD Display Functions
+------------------------------------------
+The ESP32S3 AI Chatbot is equipped with a 2-inch LCD display screen that provides the following display functions:
 
-LCD显示功能
+**Basic Interface**
+
+1. Standby Interface:
+   
+   * Displays current time
+   * Device status (network connection emoji)
+
+2. Interactive Interface:
+   
+   * Displays "Listening..." animation
+   * Real-time display of voice recognition text
+   * Scrolling display of AI reply text
+
+**Information Display**
+
+1. System Information:
+   
+   * Wi-Fi connection status
+   * AI service connection status
+   * Firmware version
+
+Button Operations
 ------------------------------------------
 
-ESP32S3 AI聊天机器人配备了2英寸LCD显示屏，提供以下显示功能：
+The physical buttons on the device provide multiple functions:
 
-**基本界面**
+1. The one connected to GPIO20 is for scrolling text up
 
-1. 待机界面：
+2. The one connected to GPIO19 is for scrolling text down
    
-   * 显示当前时间
-   * 设备状态（网络连接表情符号）
-
-2. 交互界面：
-   
-   * 显示"正在聆听..."动画
-   * 实时显示语音识别文本
-   * 滚动显示AI回复文本
-
-**信息显示**
-
-1. 系统信息：
-   
-   * Wi-Fi连接状态
-   * AI服务连接状态
-   * 固件版本
-
-按钮操作
+Use Cases
 ------------------------------------------
 
-设备上的物理按钮提供多种功能：
+**Daily Assistant**
 
-1. 连接到GPIO20的是向上滚动文字
+1. Weather Query:
+   "Hello, assistant, what's the weather like today?"
 
-2. 连接到GPIO19的是向下滚动文字
-   
-使用案例
+2. Location Information:
+   "Hello, assistant, tell me about Los Angeles"
+
+3. General Q&A:
+   "Hello, assistant, why do sloths move so slowly?"
+
+**Learning Aid**
+
+1. Knowledge Query:
+   "Hello, assistant, what is the process of photosynthesis?"
+
+2. Word Translation:
+   "Hello, assistant, how do you say 'innovation' in Chinese?"
+
+3. Mathematical Calculation:
+   "Hello, assistant, what is 23 multiplied by 45?"
+
+**Entertainment Functions**
+
+1. Telling Jokes:
+   "Hello, assistant, tell me a joke."
+
+2. Riddles:
+   "Hello, assistant, let's play riddles."
+
+3. Storytelling:
+   "Hello, assistant, tell me a bedtime story."
+
+Personalized Experience
 ------------------------------------------
 
-**日常助手**
+The ESP32S3 AI Chatbot will learn your usage habits and provide a personalized experience:
 
-1. 天气查询：
-   "你好，助手，今天天气怎么样？"
+1. Frequently used queries will receive faster responses
 
-2. 位置信息：
-   "你好，助手，告诉我关于洛杉矶的信息"
+2. Customizes answer content based on your interests
 
-3. 一般问答：
-   "你好，助手，树懒为什么动作那么慢？"
-
-**学习辅助**
-
-1. 知识查询：
-   "你好，助手，光合作用的过程是什么？"
-
-2. 单词翻译：
-   "你好，助手，'innovation'用中文怎么说？"
-
-3. 数学计算：
-   "你好，助手，23乘以45等于多少？"
-
-**娱乐功能**
-
-1. 讲笑话：
-   "你好，助手，讲个笑话。"
-
-2. 谜语：
-   "你好，助手，我们来玩谜语。"
-
-3. 讲故事：
-   "你好，助手，给我讲个睡前故事。"
-
-个性化体验
-------------------------------------------
-
-ESP32S3 AI聊天机器人将学习您的使用习惯并提供个性化体验：
-
-1. 经常使用的查询将获得更快的响应
-
-2. 根据您的兴趣定制回答内容
-
-3. 记住您的偏好设置
+3. Remembers your preference settings

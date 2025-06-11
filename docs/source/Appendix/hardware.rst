@@ -15,17 +15,14 @@ ESP32-S3 is the core processor of this project, providing powerful computing cap
 .. figure:: img/esp32s3-1.jpg
    :align: center
    :width: 70%
-   :alt: ESP32-S3 Front View
 
 .. figure:: img/esp32s3-2.jpg
    :align: center
    :width: 70%
-   :alt: ESP32-S3 Back View
 
 .. figure:: img/esp32s3-3.jpg
    :align: center
    :width: 70%
-   :alt: ESP32-S3 Complete Development Board
 
 **Key Features**
 
@@ -65,56 +62,39 @@ ESP32-S3 is the core processor of this project, providing powerful computing cap
 Display Module
 ------------------------------------------
 
-This project uses a 0.91-inch 128x32 monochrome OLED display, based on the SSD1306 controller, communicating with the ESP32-S3 via I2C interface.
+This project uses a 2.0-inch 240*320 SPI LCD display, based on the ST7789 controller, communicating with the ESP32-S3 via SPI interface.
 
-.. figure:: img/oled.jpg
+.. figure:: img/lcd.png
    :align: center
-   :alt: OLED Display Module
    :width: 60%
 
 **Key Features**
 
-* Resolution: 128×32 pixels
-* Monochrome display, high contrast
-* Low power design
-* Wide viewing angle, good visibility
-* I2C interface, requiring only 2 GPIO pins
+* Resolution: 240*320 pixels
+* RGB color display
+* IPS panel, wide viewing angle, and good visibility
+* SPI interface, easy to connect
 
 The display is mainly used for showing system status, message content, and interaction prompts.
 
-.. _audio_system:
+.. _audio_module:
 
-Audio System
+LAFVIN Audio Codec Module
 ------------------------------------------
+The LAFVIN AI Chatbot utilizes the LAFVIN Audio Codec Module, which supports voice input and output functions, enabling the device to perform voice interactions.
 
-The AI Chatbot's audio system consists of a microphone module, an amplifier module, and a speaker, supporting voice input and output functions.
-
-**Input Section**
-
-The project uses a high-sensitivity MEMS digital microphone INMP441, with the following features:
-
-.. figure:: img/mic.jpg
+.. figure:: img/audio_board.png
    :align: center
-   :alt: Microphone Module
+   :alt: LAFVIN Audio Codec Module
    :width: 60%
 
-* High signal-to-noise ratio, good sound pickup
-* Built-in digital signal processing
-* I2S interface, directly outputs digital audio signal
-* Omnidirectional pickup, wide coverage
+**Key Features**
 
-**Output Section**
-
-The speaker system uses a digital amplifier module with an 8-ohm 3W speaker:
-
-.. figure:: img/pa.jpg
-   :align: center
-   :alt: Amplifier and Speaker Module
-   :width: 60%
-
-* Clear voice playback
-* Sufficient volume output
-* PWM control, good sound quality
+* High Signal-to-Noise Ratio: Ensures clear and accurate sound pickup.
+* Built-in Digital Signal Processing (DSP): Enhances audio quality and performance.
+* I2S Interface: Directly outputs digital audio signals, compatible with microcontrollers and processors.
+* Dual Omnidirectional Microphones: Wide coverage for robust voice capture.
+* Sufficient Volume Output: Ensures clear audio playback even in noisy environments.
 
 .. _buttons:
 
@@ -123,21 +103,30 @@ Buttons and Interaction
 
 The device provides physical buttons for simple operations and control:
 
-* Reset button: For system restart
-* Function buttons: Customizable functions, default for wake-up/pause
+1. The button connected to GPIO20 is for scrolling text upward
+2. The button connected to GPIO19 is for scrolling text downward
 
-**Operation Guide**
+.. _exp_board:
 
-1. The one connected to GPIO40 is Volume+
-2. The one connected to GPIO39 is Volume- (long press for mute)
-3. The one connected to GPIO0 is for waking up or interrupting
+AI Chatbot Shield
+------------------------------------------
+The AI Chatbot Shield is an expansion board for the LAFVIN AI Chatbot, designed to simplify the wiring process and provide a plug-and-play solution for implementing AI Chatbot functionality.
 
+.. figure:: img/exp.png
+   :align: center
+   :width: 60%
+   
 .. _hardware_connection:
 
 Hardware Connection Diagram
 ------------------------------------------
 
 The following diagram shows how each hardware module is connected:
+
+.. figure:: img/connect_exp.png
+   :align: center
+   :width: 80%
+
 
 .. figure:: img/connect2.png
    :align: center

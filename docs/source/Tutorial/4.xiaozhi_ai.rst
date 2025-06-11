@@ -1,32 +1,31 @@
 .. _xiaozhi_ai:
 
 ==============================================
-Xiaozhi AI 使用教程
+Xiaozhi AI Tutorial
 ==============================================
 
-后台设置
+This project is based on `xiaozhi-esp32 <https://github.com/78/xiaozhi-esp32/blob/main/README_en.md>`_. If you want to add your own features, you can follow the documentation for secondary development.
+
+Backend Setup
 ==============================================
 
-为了使ESP32S3 AI聊天机器人正常工作，您需要注册一个后端管理账号并获取API密钥。
+To make the ESP32S3 AI Chatbot work properly, you need to register a backend management account and obtain an API key.
 
-1.我们首先需要注册一个账号
+1. First, We Need to Register an Account
 ------------------------------------------
 
-1. 访问AI聊天机器人管理系统：`Xiaozhi.me <https://xiaozhi.me>`_
+1. Visit the AI Chatbot Management System: `Xiaozhi.me <https://xiaozhi.me>`_
 
-2. 点击页面上的"控制台"按钮进入控制台
+2. Click the "Console" button on the page to enter the console
 
-3. 填写注册表单：
+3. Fill in the registration form:
    
-   * 选择您所在国家并填入手机号码（用于接收验证码）
-   * 密码（至少8个字符，必须包含字母和数字）
-  
-4. 阅读并同意用户协议和隐私政策
+   * Select your country and enter your mobile phone number (for receiving verification code)
+   * graphic verification code
 
-5. 点击"创建账号"按钮提交您的注册信息
+4. Then click "Send Code". The system will send a verification code to your phone. enter the verification code to complete registration
 
-6. 系统将向您的手机发送验证码，输入验证码完成注册
-7. 注册后，您可以在右上角的账号管理中添加密码
+5. After registration, you can add a password in the account management in the upper right corner
 
 .. figure:: img/sign0.png
    :align: center
@@ -37,21 +36,21 @@ Xiaozhi AI 使用教程
 .. figure:: img/sign2.png
    :align: center
 
-将设备添加到管理后台
+Adding Devices to the Management Backend
 ------------------------------------------
 
-1. 创建代理：
-   * 点击"创建代理"按钮
-   * 填写代理的基本信息
+1. Create an Agent:
+   * Click the "Create Agent" button
+   * Fill in the basic information of the agent
 
-2. 配置代理参数：
-   * 机器人名称：为您的AI助手命名
-   * 语音角色：选择您偏好的语音风格
-   * 语言偏好：设置对话语言
-   * 角色提示：定义AI助手的个性特征
-   * 语言模型：选择要使用的语言模型
+2. Configure Agent Parameters:
+   * Assistant Name: Name your AI assistant
+   * Voice Role: Select your preferred voice style
+   * Language Preference: Set the conversation language
+   * Role Introduction: Define the personality traits of the AI assistant
+   * Language Model: Select the language model to use
 
-3. 设置角色提示（推荐使用以下模板）：
+3. Set the Role Prompt. It is recommended to use the following template, or you can create your own role prompt:
    ::
 
       I am a virtual assistant called {{assistant_name}}. I communicate exclusively in English with a natural, friendly voice. I provide helpful, accurate information and assist users with their queries while maintaining a conversational tone. I adapt my speaking style to match the user's needs and always aim to deliver clear, concise responses in fluent English.
@@ -73,25 +72,26 @@ Xiaozhi AI 使用教程
 
 .. _firmware_upload:
 
-固件上传
+Firmware Upload
 ===============
 
-1. 双击打开Flash下载工具，然后按照下图所示选择选项：
+1. Double-click to open Flash Download Tools, then select the options as shown below:
 
 .. list-table::
-   :widths: 50 50
+   :widths: 50
    :header-rows: 0
 
    * - .. figure:: img/flashtool1.png
           :width: 100%
 
-2. 按照以下步骤上传固件：
 
-   A. 点击"选择文件"按钮选择您下载的固件文件（.bin格式）
-   B. 在bin文件选择框后的地址输入框中，输入``0或0x0``（表示固件将被下载到开发板内存的起始位置）
-   C. 从端口选择下拉菜单中选择对应ESP32-S3的COM端口（参考 :ref:`install_driver`部分了解如何通过设备管理器查看具体端口号）
-   D. 设置波特率（这里我们使用465800）
-   E. 点击"开始"按钮开始将固件下载到ESP32-S3开发板
+2. Follow these steps to upload the firmware:
+
+   A. Click the "Select File" button to choose your downloaded firmware file (.bin format)
+   B. In the address input box after the bin file selection box, enter ``0 or 0x0`` (indicating that the firmware will be downloaded to the starting position of the development board's memory)
+   C. Select the COM port corresponding to ESP32-S3 from the port selection dropdown menu (refer to the :ref:`install_driver` section for how to check the device manager for the specific port number)
+   D. Set the baud rate (we use 465800 here)
+   E. Click the "START" button to begin downloading the firmware to the ESP32-S3 development board
 
    .. figure:: img/flashtool2.png
       :align: center
@@ -101,14 +101,20 @@ Xiaozhi AI 使用教程
       :align: center
       :width: 80%
 
-3. 下载完成后，按下开发板上的RST按钮。开发板将自动重启并进入网络配置模式
-4. 将您的手机连接到名为Xiaozhi-XXXX的热点。配置页面应该会自动打开。如果没有，您可以在浏览器中手动输入``http://192.168.4.1``访问配置界面
-   .. image:: img/wificonfig_xiaozhi.png
-5. 选择您的WiFi网络并输入密码进行连接
-6. 开发板将自动重启，连接到您的WiFi，并播报一个6位验证码
-7. 去后台界面添加设备：
-   * 输入设备播报的6位验证码
-   * 点击"添加设备"按钮
-   * 重启开发板以完成设备绑定
+.. _xiaozhi_conf:
+
+3. After the download is complete, press the RST button on the development board. The board will automatically restart and enter network configuration mode
+4. Connect your phone to the hotspot named Xiaozhi-XXXX. The configuration page should open automatically. If not, you can manually enter ``http://192.168.4.1`` in your browser to access the configuration interface
+
+.. image:: img/wificonfig_xiaozhi.png
+
+5. Select your WiFi network and enter the password to connect
+6. The board will automatically restart, connect to your WiFi, and announce a 6-digit verification code
+7. Go to the backend interface. add the device in the Agent you just created:
+   * Enter the 6-digit verification code announced by the device
+   * Click the "Add Device" button
+   * Restart the development board to complete device binding
 
 .. image:: img/main_xiaozhi.png
+
+If you are using a macOS system, please refer to the firmware upload method described in :ref:`macos_upload`.

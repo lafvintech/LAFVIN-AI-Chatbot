@@ -11,8 +11,8 @@ from pygments.lexers import Python3Lexer
 import time
 
 project = 'AIChatBot'
-copyright = f'{time.localtime().tm_year}, Hosyond'
-author = 'Hosyond'
+copyright = f'{time.localtime().tm_year}, LAFVIN'
+author = 'LAFVIN'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -48,5 +48,4 @@ html_theme = 'sphinx_rtd_theme'
 
 html_theme_options = {
      'logo_only': True,
-     'display_version': False,
  }

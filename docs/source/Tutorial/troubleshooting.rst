@@ -13,16 +13,16 @@ Connection Issues
 * **Symptom**: OLED screen displays Wi-Fi icon with a diagonal line through it or prompts to enter Wi-Fi configuration mode
 * **Possible Causes**:
   
-  1. Wi-Fi密码不正确
-  2. Wi-Fi信号太弱或者无法上网
-  3. Wi-Fi网络是5GHz网络
+  1. Incorrect Wi-Fi password
+  2. Weak Wi-Fi signal or no internet access
+  3. Wi-Fi network is a 5GHz network
   
 * **Solutions**:
   
-  1. 重新烧录进入网页配对页面，确认输入的Wi-Fi密码正确
-  2. 将设备移到更靠近路由器的位置
-  3. 确保您的路由器支持2.4GHz Wi-Fi（ESP32S3不支持5GHz网络）
-  4. 使用连接到同网络的设备看下是否能访问网络以及openai网站
+  1. Reflash and enter the web pairing page, confirm that the Wi-Fi password entered is correct
+  2. Move the device closer to the router
+  3. Ensure your router supports 2.4GHz Wi-Fi (ESP32S3 does not support 5GHz networks)
+  4. Use a device connected to the same network to check if it can access the internet and OpenAI website
 
 **Cannot Connect to AI Service**
 
@@ -44,58 +44,58 @@ Voice Issues
 * **Symptom**: When speaking, the OLED screen does not display any recognized text
 * **Possible Causes**:
   
-  1. 麦克风连接错误
-  2. 环境噪音过大
-  3. 音频模块没有连接正确或者不牢固
+  1. Microphone connection error
+  2. Excessive environmental noise
+  3. Audio module not connected correctly or securely
   
 * **Solutions**:
   
-  1. 检查音频模块连接是否正确和牢固
-  2. 在后台设置中增加麦克风灵敏度
-  3. 移到更安静的环境中使用靠近麦克风说话
+  1. Check if the audio module connection is correct and secure
+  2. Increase microphone sensitivity in the backend settings
+  3. Move to a quieter environment and speak closer to the microphone
 
-**扬声器没有声音**
+**Speaker Has No Sound**
 
-* **症状**：机器人回应时没有声音输出
-* **可能原因**：
+* **Symptom**: No sound output when the robot responds
+* **Possible Causes**:
 
-  1. 扬声器没有连接到音频模块上
-  2. 音量设置为零或太低
-  3. 扬声器损坏
+  1. Speaker not connected to the audio module
+  2. Volume set to zero or too low
+  3. Damaged speaker
   
 * **Solutions**:
   
   1. Check the speaker module connection
-  2. 调整播放音量
+  2. Adjust playback volume
 
 Display Issues
 ------------------------------------------
 
 **LCD Screen Does Not Display**
 
-* **症状**：LCD屏幕完全黑屏或不显示
-* **可能原因**：
+* **Symptom**: LCD screen is completely black or shows nothing
+* **Possible Causes**:
   
-  1. 屏幕连接问题
-  2. 系统没有烧录成功
+  1. Screen connection issues
+  2. System firmware not flashed successfully
   
 * **Solutions**:
   
-  1. 检查LCD屏幕连接是否正确
-  2. 重启设备
+  1. Check if the LCD screen connections are correct
+  2. Restart the device
 
 **Abnormal Display Content**
 
-* **症状**：屏幕显示闪烁或者不断重启
-* **可能原因**：
+* **Symptom**: Screen displays flickering or keeps restarting
+* **Possible Causes**:
 
   1. Unstable screen connection
   2. Insufficient power supply
   
 * **Solutions**:
   
-  1. 检查LCD模块连接
-  2. 更换充足电源(建议最少5V2A的电源适配器)
+  1. Check the LCD module connection
+  2. Replace with an adequate power supply (recommended minimum 5V2A power adapter)
 
 System Issues
 ------------------------------------------
@@ -110,9 +110,9 @@ System Issues
   
 * **Solutions**:
   
-  1. 检查USB电源是否稳定(建议最少5V2A的电源适配器)
-  2. 确定固件烧录正确
-  3. 确认设备接线正确
+  1. Check if the USB power supply is stable (recommended minimum 5V2A power adapter)
+  2. Verify the firmware is flashed correctly
+  3. Confirm that the device is wired correctly
 
 **Device Responds Slowly**
 
@@ -124,16 +124,16 @@ System Issues
 * **Solutions**:
   
   1. Check network connection quality
-  2. 更换网络
+  2. Change to a different network
 
 Reset Device
 ------------------------------------------
 
 If you encounter problems that cannot be resolved, you can try resetting the device:
 
-**Network Reconfiguration**(xiaozhi version)
+**Network Reconfiguration (Xiaozhi version)**
 
-1. 在设备通电时长按"boot"按钮，设备将重新进入网络配置模式
+1. Press and hold the "boot" button when the device is powered on, and the device will re-enter network configuration mode
 
 **Reflash Firmware**
 
@@ -144,7 +144,7 @@ Contact Support
 
 If the above methods cannot solve your problem:
 
-1. 发送电子邮件至技术支持：`tech_edu_service@outlook.com <mailto:tech_edu_service@outlook.com>`_
+1. Send an email to technical support: `tech_edu_service@outlook.com <mailto:tech_edu_service@outlook.com>`_
 
 When seeking help, please provide the following information:
 

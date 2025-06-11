@@ -1,49 +1,47 @@
 .. _hardware_connect:
 
-硬件连接
+Hardware Connection
 ======================
 
-硬件清单
+Hardware List
 ----------------------
 
 .. list-table::
    :widths: 30 70
    :header-rows: 1
 
-   * - 组件
-     - 描述
-   * - ESP32S3模块 (×1)
-     - 核心微控制器，负责处理网络连接 、 语音识别、AI对话和其他核心功能
+   * - Component
+     - Description
+   * - ESP32S3 Module (×1)
+     - Core microcontroller with integrated Wi-Fi/Bluetooth functionality, responsible for voice recognition, AI dialogue processing, and system control
    * - 400 Tie-Points Breadboard (×2)
-     - 组装各种硬件模块的基本平台
-   * - LAFVIN Al Chatbot Shield (×1)
-     - 不用接线就能完成AIChatBot的组装
-   * - LAFVIN Audio Codec Module (×1)
-     - 语音输入/输出
-   * - 2.0寸TFT-SPI屏幕
-     - 显示设备状态和对话内容
-   * - 跳线
-     - 连接各种模块
-   * - 按钮
-     - 文本翻页
-   * - USB数据线
-     - 提供电源和数据传输
+     - Solderless platform for quick electronic component connections
+   * - LAFVIN AI Chatbot Shield (×1)
+     - Specialized expansion board that simplifies wiring, providing a plug-and-play solution for AIChatBot functionality
+   * - LAFVIN Audio Codec Module and Speaker (×1)
+     - High-quality audio codec for processing voice input capture and audio output synthesis
+   * - 2.0-inch TFT-SPI Display
+     - High-definition color display interface for real-time conversation content and system status information
+   * - Jumper Wires
+     - Electrical connection wires between modules, ensuring proper signal and power transmission
+   * - Buttons (x4)
+     - Physical interaction for text page navigation
+   * - USB Data Cable
+     - Provides stable power input and data communication between computer and device
 
-连接图
-----------------------
-
-.. figure:: img/connect_exp.png
-   :alt: ESP32S3连接图
-   :align: center
-
-扩展板完成的连接应如上图所示
-
-连接说明
+Connection Instructions
 -------------------------
 
-如果你要使用面包板进行接线,ESP32S3模块与其他组件的连接方法如下：
+If you are using the expansion board for wiring, the connection method between the ESP32S3 module and other components is as follows:
 
-**LAFVIN Audio Codec Module连接**
+.. figure:: img/connect_exp.png
+   :align: center
+
+The completed connection with the expansion board should look like the image above
+
+If you are using a breadboard for wiring, the connection method between the ESP32S3 module and other components is as follows:
+
+**LAFVIN Audio Codec Module Connection**
 
 * VCC - 5V
 * GND - GND
@@ -56,7 +54,7 @@
 * SCL - GPIO12
 * SDA - GPIO1
 
-**2.0寸TFT-SPI屏幕连接**
+**2.0-inch TFT-SPI Screen Connection**
 
 * GND - GND
 * VCC - 3V3
@@ -67,19 +65,19 @@
 * RES - RST
 * BLK - 42
 
-**按钮连接**
+**Button Connection**
 
-* 向上翻页 - GPIO20
-* 向下翻页 - GPIO19
+* Page Up - GPIO20
+* Page Down - GPIO19
 
 .. image:: img/connect.png
 
 .. warning:: 
-  请务必按照上面的连接图连接模块，否则模块可能会损坏。
+  Be sure to connect the modules according to the connection diagram above, otherwise the modules may be damaged.
 
-组装步骤
+Assembly Steps
 ----------------------
 
-1. 将模块插入扩展板对应的接口
-2. 按照扩展板的描述安装对应的模块
-3. 如果使用面包板,检查所有连接是否牢固，避免虚连接
+1. Insert the modules into the corresponding interfaces on the expansion board
+2. Install the corresponding modules according to the description on the expansion board
+3. If using a breadboard, check that all connections are secure and avoid false connections
