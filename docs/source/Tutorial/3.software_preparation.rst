@@ -11,7 +11,7 @@ Flashing Software and Bin File Download
 .. figure:: img/download.png
    :align: center
 
-1. You can visit our repository: `GitHub Repository <https://https://github.com/lafvintech/LAFVIN-AI-Chatbot>`_  or directly download the zip package from this link: `<https://codeload.github.com/lafvintech/LAFVIN-AI-Chatbot/zip/refs/heads/main>`_
+1. You can visit our repository: `GitHub Repository <https://https://github.com/lafvintech/LAFVIN-AI-Chatbot>`_  or directly download the zip package from `this link <https://codeload.github.com/lafvintech/LAFVIN-AI-Chatbot/zip/refs/heads/main>`_
 2. The downloaded zip package includes the latest bin firmware, flashing tool, and drivers.
 3. Save the downloaded firmware files to a location on your computer that is easy to access.
 
