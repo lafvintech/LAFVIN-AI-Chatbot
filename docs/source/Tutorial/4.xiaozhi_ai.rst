@@ -38,10 +38,12 @@ Adding Devices to the Management Backend
 ------------------------------------------
 
 1. Create an Agent:
+
    * Click the "Create Agent" button
    * Fill in the basic information of the agent
 
 2. Configure Agent Parameters:
+
    * Assistant Name: Name your AI assistant
    * Voice Role: Select your preferred voice style
    * Language Preference: Set the conversation language

@@ -65,8 +65,13 @@ Firmware Upload
 .. _chatgpt_conf:
 
 3. After the download is complete, press the RST button on the development board. The board will automatically restart and enter network configuration mode, displaying the configuration AP and password on the screen
-   .. image:: img/wificonfig_gpt.png
+   
+   .. image:: img/config_gpt1.png
+
 4. Connect your phone to the hotspot named ESP32_Config. You can manually enter ``http://192.168.4.1`` in your browser to access the configuration interface
+   
+   .. image:: img/config_gpt2.png
+      
 5. Select your WiFi network, enter the password, and fill in the API key (the network here needs to be able to connect to OpenAI's servers)
 6. The development board will automatically restart, connect to your WiFi, and automatically connect to the AI service (if it doesn't restart after 30 seconds, you can press the RST button again)
 
