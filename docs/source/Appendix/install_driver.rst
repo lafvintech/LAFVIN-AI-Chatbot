@@ -22,7 +22,7 @@ ESP32-S3 uses CP210X for code downloading. Before using it, we need to install t
 
 3. Click "Device Manager". If your computer has already installed CP210X, you will see "USB-Enhances-SERIAL CP210X (COMx)". You can then proceed to the next step.
 
-.. figure:: img/driver2.png
+.. figure:: img/driver3.png
    :align: center
 
 **Installing CP210X**
