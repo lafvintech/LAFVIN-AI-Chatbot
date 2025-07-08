@@ -73,6 +73,9 @@ Adding Devices to the Management Backend
 
 4. Click the "Save" button to save the role configuration
 
+.. figure:: img/web5.png
+   :align: center
+
 .. _firmware_upload:
 
 Firmware Upload
@@ -118,9 +121,6 @@ Firmware Upload
    * Enter the 6-digit verification code announced by the device
    * Click the "Add Device" button
    * Restart the development board to complete device binding
-
-.. figure:: img/web5.png
-   :align: center
 
 .. figure:: img/web6.png
    :align: center
