@@ -40,7 +40,20 @@ Adding Devices to the Management Backend
 1. Create an Agent:
 
    * Click the "Create Agent" button
-   * Fill in the basic information of the agent
+   * Fill in the agent name and then click Confirm
+   * In the agent card, click Configure Role
+
+.. figure:: img/web1.png
+   :align: center
+   :alt: Create Agent Interface
+
+.. figure:: img/web2.png
+   :align: center
+   :alt: Configure Agent Parameters
+
+.. figure:: img/web3.png
+   :align: center
+   :alt: Add Device Interface
 
 2. Configure Agent Parameters:
 
@@ -55,20 +68,10 @@ Adding Devices to the Management Backend
 
       I am a virtual assistant called {{assistant_name}}. I communicate exclusively in English with a natural, friendly voice. I provide helpful, accurate information and assist users with their queries while maintaining a conversational tone. I adapt my speaking style to match the user's needs and always aim to deliver clear, concise responses in fluent English.
 
-.. figure:: img/web1.png
-   :align: center
-   :alt: Create Agent Interface
-
-.. figure:: img/web2.png
-   :align: center
-   :alt: Configure Agent Parameters
-
-.. figure:: img/web3.png
-   :align: center
-   :alt: Add Device Interface
-
 .. figure:: img/web4.png
    :align: center
+
+4. Click the "Save" button to save the role configuration
 
 .. _firmware_upload:
 
@@ -115,6 +118,12 @@ Firmware Upload
    * Enter the 6-digit verification code announced by the device
    * Click the "Add Device" button
    * Restart the development board to complete device binding
+
+.. figure:: img/web5.png
+   :align: center
+
+.. figure:: img/web6.png
+   :align: center
 
 .. image:: img/main_xiaozhi.png
 
