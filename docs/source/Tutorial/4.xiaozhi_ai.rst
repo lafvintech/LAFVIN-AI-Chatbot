@@ -118,12 +118,16 @@ Firmware Upload
 6. The board will automatically restart, connect to your WiFi, and announce a 6-digit verification code
 7. Go to the backend interface. add the device in the Agent you just created:
 
-   * Enter the 6-digit verification code announced by the device
    * Click the "Add Device" button
-   * Restart the development board to complete device binding
-
+   * Enter the 6-digit verification code announced by the device
+   
+  
 .. figure:: img/web6.png
    :align: center
+
+.. image:: img/verify_xiaozhi.png
+
+After clicking "Confirm" and restarting the device, you'll see this interface. At that point, just say "Hi, ESP," and you can start the conversation.
 
 .. image:: img/main_xiaozhi.png
 
