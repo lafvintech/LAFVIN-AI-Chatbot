@@ -99,11 +99,11 @@ Firmware Upload
    D. Set the baud rate (we use 465800 here)
    E. Click the "START" button to begin downloading the firmware to the ESP32-S3 development board
 
-   .. figure:: img/flashtool2.png
+   .. figure:: img/flash_xiaozhi1.png
       :align: center
       :width: 80%
 
-   .. figure:: img/flash_xiaozhi.png
+   .. figure:: img/flash_xiaozhi2.png
       :align: center
       :width: 80%
 
