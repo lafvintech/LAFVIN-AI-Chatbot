@@ -51,7 +51,7 @@ If you are using a breadboard for wiring, the connection method between the ESP3
 * WS - GPIO13
 * BCLK - GPI14
 * MCLK - GPIO38
-* SCL - GPIO12
+* SCL - GPIO2
 * SDA - GPIO1
 
 **2.0-inch TFT-SPI Screen Connection**
