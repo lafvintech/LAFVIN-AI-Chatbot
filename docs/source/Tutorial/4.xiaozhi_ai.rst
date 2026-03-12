@@ -81,6 +81,9 @@ Adding Devices to the Management Backend
 Firmware Upload
 ===============
 
+Local Flashing
+-----------------
+
 1. Double-click to open Flash Download Tools, then select the options as shown below:
 
 .. list-table::
@@ -106,6 +109,24 @@ Firmware Upload
    .. figure:: img/flash_xiaozhi2.png
       :align: center
       :width: 80%
+
+Online Flashing
+-------------------
+You can also use an online flashing tool. The advantage of this method is that you simply open the webpage, select your device and firmware version, and it requires no configuration. Once flashing is complete, you can start using it right away.
+
+For detailed instructions on using the online flasher, see :ref:`Online Flasher <online_flasher>`.
+
+Follow these steps:
+
+#. Open the `LAFVIN Web Flasher <https://lafvintech.github.io/Lafvin_Web_Flasher/>`_
+#. Select the following options:
+
+   - Device: ``LA072``
+   - Firmware: ``Xiaozhi-Cam``
+   - Version: ``Xiaozhi-Cam``
+
+#. Connect the development board to your computer using a Type-C cable. Click ``Connect``, then select your device in the browser pop-up window and click connect.
+#. Click ``Flash`` to start flashing. Wait for the process to complete, then restart the device.
 
 .. _xiaozhi_conf:
 

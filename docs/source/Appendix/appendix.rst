@@ -6,6 +6,7 @@ Appendix
 
    install_driver
    hardware
+   online_flasher
 
 .. _faq:
 
