@@ -48,3 +48,5 @@ Flashing Steps
 
 .. note::
    The Flash erase process may take a while. Please be patient.
+
+After the burning is completed and the power is turned off and restarted, the screen will be displayed.

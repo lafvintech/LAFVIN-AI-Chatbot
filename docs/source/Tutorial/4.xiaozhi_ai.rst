@@ -6,6 +6,8 @@ Xiaozhi AI Tutorial
 
 This project is based on `xiaozhi-esp32 <https://github.com/78/xiaozhi-esp32/blob/main/README_en.md>`_. If you want to add your own features, you can follow the documentation for secondary development.
 
+.. _xiaozhi_backend_setup:
+
 Backend Setup
 ==============================================
 
