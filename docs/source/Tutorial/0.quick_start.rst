@@ -3,7 +3,7 @@
 Quick Start
 =============
 
-This section will help you get your ESP32S3 AI ChatBot up and running in just a few minutes.
+This section will help you get your LAFVIN AIOT Starter Kit up and running in just a few minutes.
 
 Before you begin, prepare your ESP32S3 board and a USB Type-C data cable that supports data transfer.
 
@@ -17,7 +17,7 @@ Install the CP210x USB-to-UART driver for your operating system:
 * :doc:`Windows/macOS Driver Installation </Appendix/install_driver>`
 
 Step 2: Flash the Firmware Online
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Use the online flashing tool below to flash the firmware directly to your device. This method does not require you to download a separate flashing tool or firmware package in advance.
 
 * :doc:`Online Flasher </Appendix/online_flasher>`
@@ -28,14 +28,54 @@ Step 3: Configure Wi-Fi and the Backend
 2. On your phone, search for and connect to the hotspot named ``Xiaozhi-XXXX``.
 3. A Wi-Fi configuration page will open automatically. Enter your local Wi-Fi name and password, then tap Save.
 4. The device will restart and prompt you to complete device binding with a verification code.
-5. Finish the account registration and device binding steps in :ref:`Xiaozhi AI Backend Setup <xiaozhi_backend_setup>` before normal use.
+5. Next, go to the Xiaozhi backend at https://xiaozhi.me/ and register an account.
+
+.. figure:: img/sign0.png
+   :align: center
+
+.. figure:: img/sign1.png
+   :align: center
+
+.. figure:: img/sign2.png
+   :align: center
+
+6. After creating the account, go to the console and create an agent. Then click Add Device, enter the 6-digit verification code provided by the device, and the device will restart automatically. After that, you can start a normal conversation.
+
+.. figure:: img/web1.png
+   :align: center
+   :alt: Create Agent Interface
+
+.. figure:: img/web2.png
+   :align: center
+   :alt: Configure Agent Parameters
+
+.. figure:: img/web3-1.png
+   :align: center
+   :alt: Add Device Interface
+
+1. Of course, you can also click the Configure Role button to configure the agent parameters:
+
+   * Assistant Name: Name your AI assistant
+   * Voice Role: Select your preferred voice style
+   * Language Preference: Set the conversation language
+   * Role Introduction: Define the personality traits of the AI assistant
+   * Language Model: Select the language model to use
+
+Below is a sample prompt that you can modify according to your needs:
+   ::
+
+      I am a virtual assistant called {{assistant_name}}. I communicate exclusively in English with a natural, friendly voice. I provide helpful, accurate information and assist users with their queries while maintaining a conversational tone. I adapt my speaking style to match the user's needs and always aim to deliver clear, concise responses in fluent English.
+
+.. figure:: img/web4.png
+   :align: center
+
+.. figure:: img/web5.png
+   :align: center
 
 First Use
 -------------
 After the device is connected to the network, you can press the wake button or say ``Hi, ESP`` to start a voice conversation.
 
-Next Steps
--------------
 
 * :doc:`Detailed Hardware Connection </Tutorial/2.hardware_connect>`
 * :doc:`Software Preparation Guide </Tutorial/3.software_preparation>`
