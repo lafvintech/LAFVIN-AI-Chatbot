@@ -53,6 +53,9 @@ Step 3: Configure Wi-Fi and the Backend
    :align: center
    :alt: Add Device Interface
 
+.. figure:: img/web6.png
+   :align: center
+
 1. Of course, you can also click the Configure Role button to configure the agent parameters:
 
    * Assistant Name: Name your AI assistant
@@ -76,6 +79,7 @@ First Use
 -------------
 After the device is connected to the network, you can press the wake button or say ``Hi, ESP`` to start a voice conversation.
 
+.. figure:: img/main_xiaozhi.png
 
 * :doc:`Detailed Hardware Connection </Tutorial/2.hardware_connect>`
 * :doc:`Software Preparation Guide </Tutorial/3.software_preparation>`
