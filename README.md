@@ -1,4 +1,3 @@
-@ -0,0 +1,43 @@
 # LAFVIN AI Chatbot
 
 An AI voice assistant powered by ESP32-S3 and large language models (Qwen / DeepSeek).
