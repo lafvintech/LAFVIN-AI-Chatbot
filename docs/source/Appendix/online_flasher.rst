@@ -5,6 +5,9 @@ Online Flasher
 
 The online flasher tool allows you to flash firmware to your ESP32 device directly from the browser, without installing any development environment.
 
+.. note::
+   Online flashing is supported only in Chrome or Edge browsers.
+
 Prerequisites
 ----------------
 

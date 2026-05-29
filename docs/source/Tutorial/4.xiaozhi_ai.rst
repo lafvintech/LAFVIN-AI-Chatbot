@@ -86,6 +86,9 @@ Online Flashing
 -------------------
 You can also use an online flashing tool. The advantage of this method is that you simply open the webpage, select your device and firmware version, and it requires no configuration. Once flashing is complete, you can start using it right away.
 
+.. note::
+   Online flashing is supported only in Chrome or Edge browsers.
+
 For detailed instructions on using the online flasher, see :ref:`Online Flasher <online_flasher>`.
 
 Follow these steps:

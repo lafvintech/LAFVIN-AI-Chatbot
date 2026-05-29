@@ -41,6 +41,9 @@ Online Flashing (Recommended)
 
 The recommended method is to use the LAFVIN Web Flasher. It runs directly in Chrome or Edge and does not require you to install a separate flashing tool.
 
+.. note::
+   Online flashing is supported only in Chrome or Edge browsers.
+
 For detailed instructions on using the online flasher, see :ref:`Online Flasher <online_flasher>`.
 
 1. Open the `LAFVIN Web Flasher <https://lafvintech.github.io/Lafvin_Web_Flasher/>`_.
@@ -158,16 +161,22 @@ Please check the following:
 Re-enter AP Configuration Mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+If the Wi-Fi settings or API key are entered incorrectly, you can use the following steps to enter AP configuration mode again:
 
-If the Wi-Fi settings are incorrect, you can use the ``reset_config`` command in the online flasher to make the device enter AP configuration mode again.
+1. Open the online flasher and connect to the device by following the steps above.
+2. After the connection is successful, click ``Serial Monitor``.
+3. Enter ``reset_config`` in the input box.
+4. After the command is sent, the device will restart and re-enter AP configuration mode.
 
-After the device re-enters AP configuration mode, reconnect to the hotspot and configure the Wi-Fi settings again.
+.. image:: img/gpt_resetconfig.png
 
-.. image:: img/gpt_error3.png
+Tip:
+If you want to adjust the volume, double-click the ``UP`` or ``DOWN`` button at the bottom of the expansion board. The volume will increase or decrease in 10% steps, and the change will be shown on the display.
 
 .. image:: img/gpt_volume.png
+
+At this point, the basic configuration of the ChatGPT firmware is complete. You can now start talking with the device and experience the intelligent interaction powered by ChatGPT.
 
 .. image:: img/gpt_chat.png
 
 If you are using a macOS system, please refer to the firmware upload method described in :ref:`macos_upload`.
-
