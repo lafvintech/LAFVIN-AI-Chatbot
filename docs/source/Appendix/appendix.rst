@@ -7,6 +7,7 @@ Appendix
    install_driver
    hardware
    online_flasher
+   open_source
 
 .. _faq:
 

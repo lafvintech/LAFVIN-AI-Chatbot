@@ -4,7 +4,7 @@
 4.Xiaozhi AI Tutorial
 ==============================================
 
-This project is based on `xiaozhi-esp32 <https://github.com/78/xiaozhi-esp32/blob/main/README_en.md>`_. If you want to add your own features, you can follow the documentation for secondary development.
+The Xiaozhi AI solution used in this project is open source and is based on `xiaozhi-esp32 <https://github.com/78/xiaozhi-esp32/blob/main/README_en.md>`_. If you only want to use the device, follow the flashing steps in this tutorial. If you want to customize features or continue development, see :ref:`open_source`.
 
 .. _xiaozhi_backend_setup:
 

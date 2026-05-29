@@ -15,6 +15,11 @@ This project combines edge computing and cloud AI capabilities to provide a smoo
 
 The project includes two different AI solutions, and you can choose the appropriate one to flash and use according to your needs.
 
+Open Source
+------------------------
+
+The Xiaozhi AI solution used in this project is open source and supports secondary development. If you only want to use the device, you can follow the flashing tutorial directly without building the source code yourself. If you want to customize features or continue development, see :ref:`open_source`.
+
 Application Scenarios
 ----------------------
 
