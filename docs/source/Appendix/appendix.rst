@@ -13,7 +13,7 @@ Appendix
 Frequently Asked Questions
 ------------------------------------------
 
-**Q: Does the ESP32S3 AI Chatbot support offline voice recognition?**
+**Q: Does the LAFVIN ESP32S3 AIChatBot support offline voice recognition?**
 
 A: The current version mainly relies on cloud AI services for voice recognition and processing. Basic wake word recognition can be performed locally, but full conversation functionality requires network connectivity.
 

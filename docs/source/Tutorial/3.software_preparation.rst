@@ -1,9 +1,9 @@
 .. _software_preparation:
 
-Software Preparation
+3.Software Preparation
 ======================
 
-This section will guide you through downloading and flashing the software and firmware required for the ESP32S3 AI Chatbot.
+This section will guide you through downloading and flashing the software and firmware required for the LAFVIN ESP32S3 AIChatBot.
 
 Flashing Software and Bin File Download
 ------------------------------------------

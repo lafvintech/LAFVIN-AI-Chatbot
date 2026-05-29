@@ -1,13 +1,13 @@
 .. _chatgpt:
 
 ==============================================
-ChatGPT Tutorial
+5.ChatGPT Tutorial
 ==============================================
 
 Backend Setup
 ==============================================
 
-To make the ESP32S3 AI Chatbot work properly, you need to register an OpenAI platform account and obtain an API key.
+To make the LAFVIN ESP32S3 AIChatBot work properly, you need to register an OpenAI platform account and obtain an API key.
 
 Note: This project requires the use of OpenAI API, and you need to pay for OpenAI. Additionally, the OpenAI API is billed separately from ChatGPT, with its own pricing available at https://openai.com/api/pricing/.
 
@@ -36,6 +36,48 @@ Therefore, you need to decide whether to continue with this project or ensure yo
 Firmware Upload
 ===============
 
+Online Flashing (Recommended)
+-----------------------------
+
+The recommended method is to use the LAFVIN Web Flasher. It runs directly in Chrome or Edge and does not require you to install a separate flashing tool.
+
+For detailed instructions on using the online flasher, see :ref:`Online Flasher <online_flasher>`.
+
+1. Open the `LAFVIN Web Flasher <https://lafvintech.github.io/Lafvin_Web_Flasher/>`_.
+2. Select your device model. For this kit, choose ``ESP32S3 AI Chatbot Kit``.
+
+.. image:: img/gpt_olf1.png
+
+3. Select the ChatGPT firmware and the firmware version you want to flash.
+
+.. image:: img/gpt_olf2.png
+
+.. image:: img/gpt_olf3.png
+
+4. Connect the development board to your computer using a UART Type-C data cable. Use the Type-C port on the left side of the board.
+5. Click ``Connect``, select the serial port for your ESP32-S3 device in the browser pop-up window, and confirm the connection.
+
+.. image:: img/gpt_olf4.png
+
+6. Click ``Flash`` and wait for the flashing process to complete.
+
+.. image:: img/gpt_olf5.png
+
+7. After flashing is complete, restart the development board.
+
+.. note::
+   If this is your first time flashing the device, enable ``Erase Flash`` in the web flasher before clicking ``Flash``.
+
+.. note::
+   When using online flashing on macOS, connect the USB Type-C cable to the ESP32-S3 ``USB`` port instead of the ``UART`` port. Then press and hold ``BOOT``, press ``RESET`` while still holding ``BOOT``, and enter download mode before starting the flash process.
+
+.. raw:: html
+
+   <details>
+   <summary><strong>Local Flashing (Alternative)</strong></summary>
+
+If you cannot use the web flasher, you can use Espressif Flash Download Tools as an alternative.
+
 1. Double-click to open Flash Download Tools, then select the options as shown below:
 
 .. list-table::
@@ -45,13 +87,12 @@ Firmware Upload
    * - .. figure:: img/flashtool1.png
           :width: 100%
 
-
 2. Follow these steps to upload the firmware:
 
    A. Click the "Select File" button to choose your downloaded firmware file (.bin format)
    B. In the address input box after the bin file selection box, enter ``0 or 0x0`` (indicating that the firmware will be downloaded to the starting position of the development board's memory)
    C. Select the COM port corresponding to ESP32-S3 from the port selection dropdown menu (refer to the :ref:`install_driver` section for how to check the device manager for the specific port number)
-   D. Set the baud rate (we use 465800 here)
+   D. Set the baud rate (we use 460800 here)
    E. Click the "START" button to begin downloading the firmware to the ESP32-S3 development board
 
    .. figure:: img/flash_chatgpt1.png
@@ -62,19 +103,71 @@ Firmware Upload
       :align: center
       :width: 80%
 
+.. raw:: html
+
+   </details>
+
 .. _chatgpt_conf:
 
-3. After the download is complete, press the RST button on the development board. The board will automatically restart and enter network configuration mode, displaying the configuration AP and password on the screen
-   
-   .. image:: img/config_gpt1.png
+Network and API Configuration
+=============================
 
-4. Connect your phone to the hotspot named ESP32_Config. You can manually enter ``http://192.168.4.1`` in your browser to access the configuration interface
-   
-   .. image:: img/config_gpt2.png
-      
-5. Select your WiFi network, enter the password, and fill in the API key (the network here needs to be able to connect to OpenAI's servers)
-6. The development board will automatically restart, connect to your WiFi, and automatically connect to the AI service (if it doesn't restart after 30 seconds, you can press the RST button again)
+After the firmware is flashed, press the RST button on the development board. The board will automatically restart and enter network configuration mode, displaying the configuration AP and password on the screen.
 
-.. image:: img/main_gpt.png
+.. image:: img/gpt_config1.png
+
+1. Connect your phone to the hotspot named ESP32_Config. You can manually enter ``http://192.168.4.1`` in your browser to access the configuration interface.
+
+.. image:: img/gpt_config2.png
+   :width: 50%
+
+2. Select your Wi-Fi network, enter the password, and fill in the API key. The network you use must be able to access OpenAI's servers.
+3. The development board will automatically restart, connect to your Wi-Fi, and connect to the AI service. If it does not restart after 30 seconds, press the RST button again.
+
+Common Setup Issues
+-------------------
+
+If the device cannot complete the setup successfully, check the following common issues.
+
+API Key Error
+^^^^^^^^^^^^^
+
+If the API key is invalid, missing, or entered incorrectly, the device will display an API key error message on the screen.
+
+.. image:: img/gpt_error1.png
+
+Please check the following:
+
+1. Make sure the API key was copied completely.
+2. Make sure there are no extra spaces before or after the API key.
+3. Make sure the API key is still valid and has not been deleted.
+
+Cannot Connect to OpenAI
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the Wi-Fi network cannot reach OpenAI's servers, the device will display a network connection error on the screen.
+
+.. image:: img/gpt_error2.png
+
+Please check the following:
+
+1. Make sure your Wi-Fi network can access OpenAI's servers.
+2. Try another Wi-Fi network if the current one blocks or restricts access.
+3. Restart the device after confirming that the network is working properly.
+
+Re-enter AP Configuration Mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+If the Wi-Fi settings are incorrect, you can use the ``reset_config`` command in the online flasher to make the device enter AP configuration mode again.
+
+After the device re-enters AP configuration mode, reconnect to the hotspot and configure the Wi-Fi settings again.
+
+.. image:: img/gpt_error3.png
+
+.. image:: img/gpt_volume.png
+
+.. image:: img/gpt_chat.png
 
 If you are using a macOS system, please refer to the firmware upload method described in :ref:`macos_upload`.
+

@@ -3,7 +3,7 @@
 Quick Start
 =============
 
-This section will help you get your LAFVIN AIOT Starter Kit up and running in just a few minutes.
+This section will help you get your LAFVIN ESP32S3 AIChatBot up and running in just a few minutes.
 
 Before you begin, prepare your ESP32S3 board and a USB Type-C data cable that supports data transfer.
 

@@ -3,14 +3,14 @@
 Troubleshooting
 ===============
 
-This section will help you solve common problems that you may encounter when using the ESP32S3 AI Chatbot.
+This section will help you solve common problems that you may encounter when using the LAFVIN ESP32S3 AIChatBot.
 
 Connection Issues
 ------------------------------------------
 
 **Device Cannot Connect to Wi-Fi**
 
-* **Symptom**: OLED screen displays Wi-Fi icon with a diagonal line through it or prompts to enter Wi-Fi configuration mode
+* **Symptom**: LCD screen displays Wi-Fi icon with a diagonal line through it or prompts to enter Wi-Fi configuration mode
 * **Possible Causes**:
   
   1. Incorrect Wi-Fi password
@@ -41,7 +41,7 @@ Voice Issues
 
 **Microphone Cannot Recognize Speech**
 
-* **Symptom**: When speaking, the OLED screen does not display any recognized text
+* **Symptom**: When speaking, the LCD screen does not display any recognized text
 * **Possible Causes**:
   
   1. Microphone connection error

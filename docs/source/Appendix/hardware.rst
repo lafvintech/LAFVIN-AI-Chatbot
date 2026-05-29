@@ -3,7 +3,7 @@
 Hardware Introduction
 ===========================
 
-This document provides a detailed introduction to the hardware components, functions, and usage methods of the ESP32-S3 AI Chatbot.
+This document provides a detailed introduction to the hardware components, functions, and usage methods of the LAFVIN ESP32S3 AIChatBot.
 
 .. _esp32s3_specs:
 
@@ -81,7 +81,7 @@ The display is mainly used for showing system status, message content, and inter
 
 LAFVIN Audio Codec Module
 ------------------------------------------
-The LAFVIN AI Chatbot utilizes the LAFVIN Audio Codec Module, which supports voice input and output functions, enabling the device to perform voice interactions.
+The LAFVIN ESP32S3 AIChatBot utilizes the LAFVIN Audio Codec Module, which supports voice input and output functions, enabling the device to perform voice interactions.
 
 .. figure:: img/audio_board.png
    :align: center
@@ -110,7 +110,7 @@ The device provides physical buttons for simple operations and control:
 
 AI Chatbot Shield
 ------------------------------------------
-The AI Chatbot Shield is an expansion board for the LAFVIN AI Chatbot, designed to simplify the wiring process and provide a plug-and-play solution for implementing AI Chatbot functionality.
+The AI Chatbot Shield is an expansion board for the LAFVIN ESP32S3 AIChatBot, designed to simplify the wiring process and provide a plug-and-play solution for implementing AI Chatbot functionality.
 
 .. figure:: img/exp.png
    :align: center

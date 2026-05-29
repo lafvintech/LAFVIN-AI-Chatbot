@@ -1,5 +1,5 @@
-ESP32S3 AIChatBot
-====================
+LAFVIN ESP32S3 AIChatBot
+=========================
 
 .. toctree::
    :maxdepth: 1

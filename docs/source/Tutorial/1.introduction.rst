@@ -1,6 +1,6 @@
 .. _introduction:
 
-Introduction
+1.Introduction
 ================
 
 .. figure:: img/project.jpg
@@ -9,7 +9,7 @@ Introduction
 Project Overview
 ------------------------
 
-ESP32S3 AI Chatbot is an intelligent voice interaction project based on the ESP32S3 microcontroller. This project integrates hardware modules such as the LAFVIN AI Chatbot Shield, LAFVIN Audio Codec Module, 2.0-inch TFT-SPI screen, and buttons to create a smart assistant capable of natural language conversation with users.
+LAFVIN ESP32S3 AIChatBot is an intelligent voice interaction project based on the ESP32S3 microcontroller. This project integrates hardware modules such as the LAFVIN AI Chatbot Shield, LAFVIN Audio Codec Module, 2.0-inch TFT-SPI screen, and buttons to create a smart assistant capable of natural language conversation with users.
 
 This project combines edge computing and cloud AI capabilities to provide a smooth voice interaction experience, applicable to various scenarios such as smart home control, personal assistance, educational companionship, entertainment interaction, and more.
 

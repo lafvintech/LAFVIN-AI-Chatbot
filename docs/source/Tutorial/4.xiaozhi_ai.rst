@@ -1,7 +1,7 @@
 .. _xiaozhi_ai:
 
 ==============================================
-Xiaozhi AI Tutorial
+4.Xiaozhi AI Tutorial
 ==============================================
 
 This project is based on `xiaozhi-esp32 <https://github.com/78/xiaozhi-esp32/blob/main/README_en.md>`_. If you want to add your own features, you can follow the documentation for secondary development.
@@ -82,9 +82,28 @@ Adding Devices to the Management Backend
 
 Firmware Upload
 ===============
+Online Flashing
+-------------------
+You can also use an online flashing tool. The advantage of this method is that you simply open the webpage, select your device and firmware version, and it requires no configuration. Once flashing is complete, you can start using it right away.
 
-Local Flashing
------------------
+For detailed instructions on using the online flasher, see :ref:`Online Flasher <online_flasher>`.
+
+Follow these steps:
+
+   A. Open the `LAFVIN Web Flasher <https://lafvintech.github.io/Lafvin_Web_Flasher/>`_
+   B. Select the following options:
+
+      - Device: ``ESP32S3 AI Chatbot Kit``
+      - Firmware: ``Xiaozhi-esp32``
+      - Version: ``2.2.4``
+
+   C. Connect the development board to your computer using a Type-C cable. Click ``Connect``, then select your device in the browser pop-up window and click connect.
+   D. Click ``Flash`` to start flashing. Wait for the process to complete, then restart the device.
+
+.. raw:: html
+
+   <details>
+   <summary><strong>Local Flashing (Alternative)</strong></summary>
 
 1. Double-click to open Flash Download Tools, then select the options as shown below:
 
@@ -101,7 +120,7 @@ Local Flashing
    A. Click the "Select File" button to choose your downloaded firmware file (.bin format)
    B. In the address input box after the bin file selection box, enter ``0 or 0x0`` (indicating that the firmware will be downloaded to the starting position of the development board's memory)
    C. Select the COM port corresponding to ESP32-S3 from the port selection dropdown menu (refer to the :ref:`install_driver` section for how to check the device manager for the specific port number)
-   D. Set the baud rate (we use 465800 here)
+   D. Set the baud rate (we use 460800 here)
    E. Click the "START" button to begin downloading the firmware to the ESP32-S3 development board
 
    .. figure:: img/flash_xiaozhi1.png
@@ -112,23 +131,9 @@ Local Flashing
       :align: center
       :width: 80%
 
-Online Flashing
--------------------
-You can also use an online flashing tool. The advantage of this method is that you simply open the webpage, select your device and firmware version, and it requires no configuration. Once flashing is complete, you can start using it right away.
+.. raw:: html
 
-For detailed instructions on using the online flasher, see :ref:`Online Flasher <online_flasher>`.
-
-Follow these steps:
-
-#. Open the `LAFVIN Web Flasher <https://lafvintech.github.io/Lafvin_Web_Flasher/>`_
-#. Select the following options:
-
-   - Device: ``LA072``
-   - Firmware: ``Xiaozhi-Cam``
-   - Version: ``Xiaozhi-Cam``
-
-#. Connect the development board to your computer using a Type-C cable. Click ``Connect``, then select your device in the browser pop-up window and click connect.
-#. Click ``Flash`` to start flashing. Wait for the process to complete, then restart the device.
+   </details>
 
 .. _xiaozhi_conf:
 
@@ -137,8 +142,8 @@ Follow these steps:
 
 .. image:: img/wificonfig_xiaozhi.png
 
-5. Select your WiFi network and enter the password to connect
-6. The board will automatically restart, connect to your WiFi, and announce a 6-digit verification code
+5. Select your Wi-Fi network and enter the password to connect
+6. The board will automatically restart, connect to your Wi-Fi, and announce a 6-digit verification code
 7. Go to the backend interface. add the device in the Agent you just created:
 
    * Click the "Add Device" button

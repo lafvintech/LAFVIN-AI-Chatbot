@@ -1,6 +1,6 @@
 .. _hardware_connect:
 
-Hardware Connection
+2.Hardware Connection
 ======================
 
 Hardware List
@@ -17,7 +17,7 @@ Hardware List
    * - 400 Tie-Points Breadboard (×2)
      - Solderless platform for quick electronic component connections
    * - LAFVIN AI Chatbot Shield (×1)
-     - Specialized expansion board that simplifies wiring, providing a plug-and-play solution for AIChatBot functionality
+     - Specialized expansion board that simplifies wiring, providing a plug-and-play solution for LAFVIN ESP32S3 AIChatBot functionality
    * - LAFVIN Audio Codec Module and Speaker (×1)
      - High-quality audio codec for processing voice input capture and audio output synthesis
    * - 2.0-inch TFT-SPI Display
@@ -49,7 +49,7 @@ If you are using a breadboard for wiring, the connection method between the ESP3
 * DOUT - GPIO45
 * DIN - GPIO12
 * WS - GPIO13
-* BCLK - GPI14
+* BCLK - GPIO14
 * MCLK - GPIO38
 * SCL - GPIO2
 * SDA - GPIO1

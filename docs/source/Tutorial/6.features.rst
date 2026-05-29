@@ -3,12 +3,12 @@
 Usage Guide
 =============
 
-This section will introduce in detail the features and usage methods of the ESP32S3 AI Chatbot.
+This section will introduce in detail the features and usage methods of the LAFVIN ESP32S3 AIChatBot.
 
 Voice Interaction
 ------------------------------------------
 
-The core functionality of the ESP32S3 AI Chatbot is voice interaction. You can communicate with the robot in the following ways:
+The core functionality of the LAFVIN ESP32S3 AIChatBot is voice interaction. You can communicate with the robot in the following ways:
 
 **Wake-up Methods**
 
@@ -21,7 +21,7 @@ The core functionality of the ESP32S3 AI Chatbot is voice interaction. You can c
 
 **Conversation Capabilities**
 
-The ESP32S3 AI Chatbot supports the following types of conversations:
+The LAFVIN ESP32S3 AIChatBot supports the following types of conversations:
 
 1. General Q&A: Answers questions about daily life and encyclopedic knowledge
 
@@ -39,7 +39,7 @@ The ESP32S3 AI Chatbot supports the following types of conversations:
 
 LCD Display Functions
 ------------------------------------------
-The ESP32S3 AI Chatbot is equipped with a 2-inch LCD display screen that provides the following display functions:
+The LAFVIN ESP32S3 AIChatBot is equipped with a 2-inch LCD display screen that provides the following display functions:
 
 **Basic Interface**
 
@@ -110,7 +110,7 @@ Use Cases
 Personalized Experience
 ------------------------------------------
 
-The ESP32S3 AI Chatbot will learn your usage habits and provide a personalized experience:
+The LAFVIN ESP32S3 AIChatBot will learn your usage habits and provide a personalized experience:
 
 1. Frequently used queries will receive faster responses
 
