@@ -15,6 +15,32 @@ This project combines edge computing and cloud AI capabilities to provide a smoo
 
 The project includes two different AI solutions, and you can choose the appropriate one to flash and use according to your needs.
 
+AI Solution Comparison
+------------------------
+
+.. list-table::
+   :widths: 18 41 41
+   :header-rows: 1
+
+   * - Solution
+     - Xiaozhi AI
+     - ChatGPT
+   * - Best For
+     - Users who want the fastest ready-to-use experience with more built-in features
+     - Users who prefer using their own OpenAI account and want to avoid mobile phone registration
+   * - Account Requirement
+     - Requires registration on the Xiaozhi backend with a mobile phone number
+     - Requires an OpenAI account and API key
+   * - Cost
+     - Free to use
+     - Requires paid OpenAI API balance
+   * - Setup Style
+     - Backend binding through Xiaozhi services
+     - Wi-Fi and API key configuration through the local AP page
+   * - Development Path
+     - Open source and suitable for secondary development
+     - Primarily intended for ready-to-use configuration in this project
+
 Open Source
 ------------------------
 

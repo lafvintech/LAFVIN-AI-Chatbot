@@ -3,117 +3,104 @@
 Usage Guide
 =============
 
-This section will introduce in detail the features and usage methods of the LAFVIN ESP32S3 AIChatBot.
+This section introduces the main features and everyday usage of the LAFVIN ESP32S3 AIChatBot.
 
 Voice Interaction
 ------------------------------------------
 
-The core functionality of the LAFVIN ESP32S3 AIChatBot is voice interaction. You can communicate with the robot in the following ways:
+The core experience of the LAFVIN ESP32S3 AIChatBot is voice interaction. You can talk to the device in the following ways:
 
 **Wake-up Methods**
 
-1. Wake Word Trigger:
-   
-   * The default wake word is "Hi ESP"
-   * After saying the wake word, the AI-Bot will respond to you
-   * After waking up, there is approximately a 5-second waiting time to receive your question or command
-   * ChatGPT version doesn't require a wake word, you can talk directly, and both versions support mid-conversation interruption
+1. Wake word trigger:
+
+   * The default wake words are ``Hi, ESP`` and ``Sophia``.
+   * If you want a different wake word, you can customize it through secondary development.
+   * After the wake word is detected, the AI ChatBot will respond and enter listening mode.
+   * After wake-up, there is a listening window of about 5 seconds for your question or command.
+   * The ChatGPT firmware supports direct conversation without a wake word, and both firmware versions support interruption during conversation.
 
 **Conversation Capabilities**
 
-The LAFVIN ESP32S3 AIChatBot supports the following types of conversations:
+The LAFVIN ESP32S3 AIChatBot can handle a variety of conversations, including:
 
-1. General Q&A: Answers questions about daily life and encyclopedic knowledge
-
-2. Information Queries: Weather, news, date and time, etc.
-
-3. Entertainment Interaction: Telling jokes, stories, riddles, etc.
-
-4. Personalized Services: Provides customized answers based on your usage habits
+1. General Q&A for everyday questions and common knowledge
+2. Information requests such as weather, time, and current events
+3. Entertainment interactions such as jokes, stories, and riddles
+4. Personalized responses based on your selected role and prompt settings
 
 **Voice Quality**
 
-1. Microphone pickup range: Approximately 2-3 meters
-
-2. Noise suppression: Built-in algorithm can filter environmental noise
+1. Microphone pickup range: approximately 2 to 3 meters
+2. Noise suppression: built-in processing helps reduce background noise
 
 LCD Display Functions
 ------------------------------------------
-The LAFVIN ESP32S3 AIChatBot is equipped with a 2-inch LCD display screen that provides the following display functions:
+
+The LAFVIN ESP32S3 AIChatBot includes a 2-inch LCD screen for status display and conversation feedback.
 
 **Basic Interface**
 
-1. Standby Interface:
-   
-   * Displays current time
-   * Device status (network connection emoji)
+1. Standby interface:
 
-2. Interactive Interface:
-   
-   * Displays "Listening..." animation
-   * Real-time display of voice recognition text
-   * Scrolling display of AI reply text
+   * Displays the current time
+   * Shows the device status, including network status indicators
+
+2. Interactive interface:
+
+   * Displays a listening animation while the device is waiting for speech
+   * Shows recognized speech text in real time
+   * Scrolls the AI response on the screen
+
+.. image:: img/xiaozhi_chat.png
+
+.. image:: img/gpt_chat.png
 
 **Information Display**
 
-1. System Information:
-   
+1. System information:
+
    * Wi-Fi connection status
    * AI service connection status
-   * Firmware version
 
-Button Operations
+Button Operations (ChatGPT Version)
 ------------------------------------------
 
-The physical buttons on the device provide multiple functions:
+On the ChatGPT firmware, the physical buttons on the device support the following actions:
 
-1. The one connected to GPIO20 is for scrolling text up
+1. Single-click ``UP``: scroll the conversation upward
+2. Single-click ``DOWN``: scroll the conversation downward
+3. Double-click ``UP``: increase the volume
+4. Double-click ``DOWN``: decrease the volume
 
-2. The one connected to GPIO19 is for scrolling text down
-   
 Use Cases
 ------------------------------------------
 
-**Daily Assistant**
+The LAFVIN ESP32S3 AIChatBot can fit naturally into a range of everyday situations.
 
-1. Weather Query:
-   "Hello, assistant, what's the weather like today?"
+**Daily Convenience**
 
-2. Location Information:
-   "Hello, assistant, tell me about Los Angeles"
+1. Start your morning with a quick question such as: ``What's the weather like today?``
+2. Ask for local information before a trip, for example: ``Tell me about Los Angeles.``
+3. Use it for quick factual questions throughout the day, such as: ``Why do sloths move so slowly?``
 
-3. General Q&A:
-   "Hello, assistant, why do sloths move so slowly?"
+**Learning and Study**
 
-**Learning Aid**
+1. Ask for explanations of school topics, for example: ``What is the process of photosynthesis?``
+2. Use it for language help, such as: ``How do you say 'innovation' in Chinese?``
+3. Let it solve quick calculations, for example: ``What is 23 multiplied by 45?``
 
-1. Knowledge Query:
-   "Hello, assistant, what is the process of photosynthesis?"
+**Fun and Conversation**
 
-2. Word Translation:
-   "Hello, assistant, how do you say 'innovation' in Chinese?"
-
-3. Mathematical Calculation:
-   "Hello, assistant, what is 23 multiplied by 45?"
-
-**Entertainment Functions**
-
-1. Telling Jokes:
-   "Hello, assistant, tell me a joke."
-
-2. Riddles:
-   "Hello, assistant, let's play riddles."
-
-3. Storytelling:
-   "Hello, assistant, tell me a bedtime story."
+1. Ask it to tell a joke when you want something light and playful
+2. Start a riddle game for interactive fun
+3. Ask for a bedtime story or a short story during casual conversation
 
 Personalized Experience
 ------------------------------------------
 
-The LAFVIN ESP32S3 AIChatBot will learn your usage habits and provide a personalized experience:
+With different firmware settings, prompts, and roles, the LAFVIN ESP32S3 AIChatBot can provide a more personalized interaction experience.
 
-1. Frequently used queries will receive faster responses
-
-2. Customizes answer content based on your interests
-
-3. Remembers your preference settings
+1. You can adjust the assistant's role, tone, and speaking style
+2. You can choose different voices and language preferences
+3. You can create a more tailored interaction flow through backend configuration or secondary development

@@ -7,6 +7,20 @@ This section will help you get your LAFVIN ESP32S3 AIChatBot up and running in j
 
 Before you begin, prepare your ESP32S3 board and a USB Type-C data cable that supports data transfer.
 
+Choose Your Firmware
+--------------------
+
+This project provides two firmware options:
+
+* **Xiaozhi AI firmware**: Offers more complete built-in features, supports the Xiaozhi backend, and is free to use. However, it requires you to register an account with a mobile phone number.
+* **ChatGPT firmware**: A good alternative if you have privacy concerns about mobile phone registration. However, it requires an OpenAI account and paid API balance in order to create and use an API key.
+
+If you want the fastest ready-to-use experience, we recommend Xiaozhi AI firmware. If you prefer to avoid mobile phone registration, choose the ChatGPT firmware instead.
+
+If you want to use the ChatGPT firmware, please refer to :doc:`ChatGPT Tutorial </Tutorial/5.chatgpt>` for the remaining firmware flashing and configuration steps.
+
+If you want to use the Xiaozhi AI firmware, continue with the steps below.
+
 Quick Setup
 -------------
 
@@ -56,7 +70,7 @@ Step 3: Configure Wi-Fi and the Backend
 .. figure:: img/web6.png
    :align: center
 
-1. Of course, you can also click the Configure Role button to configure the agent parameters:
+7. Of course, you can also click the Configure Role button to configure the agent parameters:
 
    * Assistant Name: Name your AI assistant
    * Voice Role: Select your preferred voice style
@@ -77,7 +91,7 @@ Below is a sample prompt that you can modify according to your needs:
 
 First Use
 -------------
-After the device is connected to the network, you can press the wake button or say ``Hi, ESP`` to start a voice conversation.
+After the device is connected to the network, you can press the wake button or say ``Hi, ESP`` or ``Sophia`` to start a voice conversation.
 
 .. figure:: img/main_xiaozhi.png
 
