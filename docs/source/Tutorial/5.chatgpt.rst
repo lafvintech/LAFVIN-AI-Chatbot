@@ -73,7 +73,7 @@ For detailed instructions on using the online flasher, see :ref:`Online Flasher 
 
 .. image:: img/gpt_olf3.png
 
-4. Connect the development board to your computer using a UART Type-C data cable. Use the Type-C port on the left side of the board.
+4. Connect the development board to your computer using a USB Type-C data cable. Use the UART Type-C port on the left side of the board.
 5. Click ``Connect``, select the serial port for your ESP32-S3 device in the browser pop-up window, and confirm the connection.
 
 .. image:: img/gpt_olf4.png

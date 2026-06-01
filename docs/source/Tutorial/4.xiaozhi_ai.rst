@@ -103,7 +103,7 @@ Follow these steps:
       - Firmware: ``Xiaozhi-esp32``
       - Version: ``2.2.4``
 
-   C. Connect the development board to your computer using a Type-C cable. Click ``Connect``, then select your device in the browser pop-up window and click connect.
+   C. Connect the development board to your computer using a USB Type-C data cable. Click ``Connect``, then select your device in the browser pop-up window and click ``Connect``.
    D. Click ``Flash`` to start flashing. Wait for the process to complete, then restart the device.
 
 .. raw:: html

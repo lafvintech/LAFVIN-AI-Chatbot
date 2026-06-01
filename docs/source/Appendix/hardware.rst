@@ -45,7 +45,7 @@ ESP32-S3 is the core processor of this project, providing powerful computing cap
    * - Storage
      - Supports up to 16MB Flash
    * - Wi-Fi
-     - IEEE 802.11 b/g/n, supports 2.4GHz band
+     - IEEE 802.11 b/g/n, supports the 2.4 GHz band
    * - Bluetooth
      - Bluetooth 5.0 and BLE
    * - GPIO

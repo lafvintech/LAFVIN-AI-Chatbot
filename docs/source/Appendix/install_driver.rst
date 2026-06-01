@@ -46,7 +46,7 @@ For most users running macOS Catalina (10.15) or later, the CP210x driver is bui
 .. note::
    We recommend using the :ref:`Online Flasher <online_flasher>` first. The local macOS flashing method below is an alternative option when you cannot use online flashing.
 
-1. First, find the macos folder in the Github repository
+1. First, find the macOS folder in the GitHub repository
 
 2. We have prepared the flashing tools and files for macOS in this folder
 

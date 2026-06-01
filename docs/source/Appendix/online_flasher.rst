@@ -42,7 +42,7 @@ Flashing Steps
 
    .. image:: img/olf5.png
 
-#. Click ``Connect``. A serial port selection window will pop up in the upper-left corner of the browser (grant permission if prompted). Select your device and click connect. Once connected, the button will change to ``Disconnect``.
+#. Click ``Connect``. A serial port selection window will pop up in the upper-left corner of the browser (grant permission if prompted). Select your device and click ``Connect``. Once connected, the button will change to ``Disconnect``.
 
    .. image:: img/olf6.png
 
