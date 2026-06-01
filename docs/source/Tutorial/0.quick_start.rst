@@ -7,6 +7,9 @@ This section will help you get your LAFVIN ESP32S3 AIChatBot up and running in j
 
 Before you begin, prepare your ESP32S3 board and a USB Type-C data cable that supports data transfer.
 
+.. warning::
+   Make sure you are using a USB Type-C cable that supports data transfer. Some charging-only cables can power the board but cannot be used for flashing or serial communication.
+
 Choose Your Firmware
 --------------------
 
@@ -38,6 +41,10 @@ Use the online flashing tool below to flash the firmware directly to your device
 
 Step 3: Configure Wi-Fi and the Backend
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+   The ESP32-S3 supports only 2.4 GHz Wi-Fi networks. Make sure the Wi-Fi network you choose is not 5 GHz only.
+
 1. After the device powers on, it will automatically enter Wi-Fi provisioning mode.
 2. On your phone, search for and connect to the hotspot named ``Xiaozhi-XXXX``.
 3. A Wi-Fi configuration page will open automatically. Enter your local Wi-Fi name and password, then tap Save.

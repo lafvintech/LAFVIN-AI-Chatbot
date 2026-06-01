@@ -9,9 +9,22 @@ Backend Setup
 
 To make the LAFVIN ESP32S3 AIChatBot work properly, you need to register an OpenAI platform account and obtain an API key.
 
-Note: This project requires the use of OpenAI API, and you need to pay for OpenAI. Additionally, the OpenAI API is billed separately from ChatGPT, with its own pricing available at https://openai.com/api/pricing/.
+.. warning::
+   This project uses the OpenAI API, which is billed separately from ChatGPT subscriptions. You need an OpenAI account with paid API balance before you can create and use an API key. Pricing information is available at https://openai.com/api/pricing/.
 
-Therefore, you need to decide whether to continue with this project or ensure you have funded the OpenAI API.
+Model Used in This Project
+------------------------------------------
+
+This project uses the ``gpt-realtime-mini`` model.
+
+At the time of writing, the official pricing for this model is:
+
+* Input: ``$0.60`` per 1M tokens
+* Output: ``$2.40`` per 1M tokens
+* Cached input: ``$0.06`` per 1M tokens
+
+For the latest model details and pricing, see the official OpenAI model page:
+`gpt-realtime-mini <https://developers.openai.com/api/docs/models/gpt-realtime-mini>`_
 
 1. Obtaining OpenAI API Key
 ------------------------------------------
@@ -43,6 +56,9 @@ The recommended method is to use the LAFVIN Web Flasher. It runs directly in Chr
 
 .. note::
    Online flashing is supported only in Chrome or Edge browsers.
+
+.. warning::
+   Use a USB Type-C cable that supports data transfer. A charging-only cable may power the board but will not work for flashing.
 
 For detailed instructions on using the online flasher, see :ref:`Online Flasher <online_flasher>`.
 
@@ -114,6 +130,9 @@ If you cannot use the web flasher, you can use Espressif Flash Download Tools as
 
 Network and API Configuration
 =============================
+
+.. note::
+   The ESP32-S3 supports only 2.4 GHz Wi-Fi networks. In addition, the Wi-Fi network you choose must be able to access OpenAI's servers.
 
 After the firmware is flashed, press the RST button on the development board. The board will automatically restart and enter network configuration mode, displaying the configuration AP and password on the screen.
 

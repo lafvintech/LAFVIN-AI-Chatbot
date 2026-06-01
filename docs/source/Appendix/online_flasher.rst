@@ -8,6 +8,9 @@ The online flasher tool allows you to flash firmware to your ESP32 device direct
 .. note::
    Online flashing is supported only in Chrome or Edge browsers.
 
+.. warning::
+   Use a USB cable that supports data transfer. A charging-only cable may power the board but will not work for flashing or serial connection.
+
 Prerequisites
 ----------------
 

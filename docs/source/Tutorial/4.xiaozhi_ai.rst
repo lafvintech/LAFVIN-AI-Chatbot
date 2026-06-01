@@ -11,7 +11,7 @@ The Xiaozhi AI solution used in this project is open source and is based on `xia
 Backend Setup
 ==============================================
 
-First, We Need to Register an Account
+First, Register a Xiaozhi Account
 ------------------------------------------
 
 1. Visit the AI Chatbot Management System: `Xiaozhi.me <https://xiaozhi.me>`_
@@ -89,6 +89,9 @@ You can also use an online flashing tool. The advantage of this method is that y
 .. note::
    Online flashing is supported only in Chrome or Edge browsers.
 
+.. warning::
+   Use a USB Type-C cable that supports data transfer. A charging-only cable may power the board but will not work for flashing.
+
 For detailed instructions on using the online flasher, see :ref:`Online Flasher <online_flasher>`.
 
 Follow these steps:
@@ -139,6 +142,9 @@ Follow these steps:
    </details>
 
 .. _xiaozhi_conf:
+
+.. note::
+   The ESP32-S3 supports only 2.4 GHz Wi-Fi networks. Make sure the Wi-Fi network you select is not 5 GHz only.
 
 3. After the download is complete, press the RST button on the development board. The board will automatically restart and enter network configuration mode
 4. Connect your phone to the hotspot named Xiaozhi-XXXX. The configuration page should open automatically. If not, you can manually enter ``http://192.168.4.1`` in your browser to access the configuration interface
