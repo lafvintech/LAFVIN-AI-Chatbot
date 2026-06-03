@@ -92,6 +92,9 @@ You can also use an online flashing tool. The advantage of this method is that y
 .. warning::
    Use a USB Type-C cable that supports data transfer. A charging-only cable may power the board but will not work for flashing.
 
+.. note::
+   On Windows, connect the USB Type-C data cable to the ESP32-S3 ``UART`` port on the left side of the board before clicking ``Connect``. On macOS, connect the cable to the ESP32-S3 ``USB`` port on the right side, then press and hold ``BOOT``, press ``RESET`` while still holding ``BOOT``, and enter download mode before clicking ``Connect``. The screen will turn black after the device enters download mode; this is normal.
+
 For detailed instructions on using the online flasher, see :ref:`Online Flasher <online_flasher>`.
 
 Follow these steps:
@@ -103,8 +106,10 @@ Follow these steps:
       - Firmware: ``Xiaozhi-esp32``
       - Version: ``2.2.4``
 
-   C. Connect the development board to your computer using a USB Type-C data cable. Click ``Connect``, then select your device in the browser pop-up window and click ``Connect``.
-   D. Click ``Flash`` to start flashing. Wait for the process to complete, then restart the device.
+   C. Connect the development board to your computer using the correct USB Type-C port for your operating system, as described in the note above, before clicking ``Connect``.
+   D. Click ``Connect``, then select your device in the browser pop-up window and click ``Connect`` again.
+   E. Click ``Flash`` to start flashing. Wait for the process to complete.
+   F. After flashing is complete, restart the device by pressing the ``RST`` or ``RESET`` button on the ESP32-S3 board. You do not need to unplug the USB cable unless the device does not respond.
 
 .. raw:: html
 
@@ -146,14 +151,14 @@ Follow these steps:
 .. note::
    The ESP32-S3 supports only 2.4 GHz Wi-Fi networks. Make sure the Wi-Fi network you select is not 5 GHz only.
 
-3. After the download is complete, press the RST button on the development board. The board will automatically restart and enter network configuration mode
-4. Connect your phone to the hotspot named Xiaozhi-XXXX. The configuration page should open automatically. If not, you can manually enter ``http://192.168.4.1`` in your browser to access the configuration interface
+3. After the firmware is flashed, press the ``RST`` or ``RESET`` button on the development board. The board will restart and enter network configuration mode.
+4. Connect your phone to the hotspot named ``Xiaozhi-XXXX``. The configuration page should open automatically. If not, manually enter ``http://192.168.4.1`` in your browser to access the configuration interface.
 
 .. image:: img/wificonfig_xiaozhi.png
 
-5. Select your Wi-Fi network and enter the password to connect
-6. The board will automatically restart, connect to your Wi-Fi, and announce a 6-digit verification code
-7. Go to the backend interface. add the device in the Agent you just created:
+5. Select your Wi-Fi network, enter the password, and click ``Save``. The device will save the settings and restart automatically.
+6. After restarting, the board will connect to your Wi-Fi and announce a 6-digit verification code. If it does not restart within about 30 seconds, press the ``RST`` or ``RESET`` button once.
+7. Go to the backend interface and add the device in the Agent you just created:
 
    * Click the "Add Device" button
    * Enter the 6-digit verification code announced by the device
@@ -168,4 +173,4 @@ After clicking "Confirm" and restarting the device, you'll see this interface. A
 
 .. image:: img/main_xiaozhi.png
 
-If you are using a macOS system, please refer to the firmware upload method described in :ref:`macos_upload`.
+For flashing help, driver troubleshooting, or alternative flashing methods, see :ref:`Online Flasher <online_flasher>`.

@@ -60,6 +60,9 @@ The recommended method is to use the LAFVIN Web Flasher. It runs directly in Chr
 .. warning::
    Use a USB Type-C cable that supports data transfer. A charging-only cable may power the board but will not work for flashing.
 
+.. note::
+   On Windows, connect the USB Type-C data cable to the ESP32-S3 ``UART`` port on the left side of the board before clicking ``Connect``. On macOS, connect the cable to the ESP32-S3 ``USB`` port on the right side, then press and hold ``BOOT``, press ``RESET`` while still holding ``BOOT``, and enter download mode before clicking ``Connect``. The screen will turn black after the device enters download mode; this is normal.
+
 For detailed instructions on using the online flasher, see :ref:`Online Flasher <online_flasher>`.
 
 1. Open the `LAFVIN Web Flasher <https://lafvintech.github.io/Lafvin_Web_Flasher/>`_.
@@ -73,7 +76,7 @@ For detailed instructions on using the online flasher, see :ref:`Online Flasher 
 
 .. image:: img/gpt_olf3.png
 
-4. Connect the development board to your computer using a USB Type-C data cable. Use the UART Type-C port on the left side of the board.
+4. Connect the development board to your computer using the correct USB Type-C port for your operating system, as described in the note above.
 5. Click ``Connect``, select the serial port for your ESP32-S3 device in the browser pop-up window, and confirm the connection.
 
 .. image:: img/gpt_olf4.png
@@ -86,9 +89,6 @@ For detailed instructions on using the online flasher, see :ref:`Online Flasher 
 
 .. note::
    If this is your first time flashing the device, enable ``Erase Flash`` in the web flasher before clicking ``Flash``.
-
-.. note::
-   When using online flashing on macOS, connect the USB Type-C cable to the ESP32-S3 ``USB`` port instead of the ``UART`` port. Then press and hold ``BOOT``, press ``RESET`` while still holding ``BOOT``, and enter download mode before starting the flash process.
 
 .. raw:: html
 
@@ -198,4 +198,4 @@ At this point, the basic configuration of the ChatGPT firmware is complete. You 
 
 .. image:: img/gpt_chat.png
 
-If you are using a macOS system, please refer to the firmware upload method described in :ref:`macos_upload`.
+For flashing help, driver troubleshooting, or alternative flashing methods, see :ref:`Online Flasher <online_flasher>`.
