@@ -8,10 +8,9 @@ import os
 import sys
 import glob
 import subprocess
-import time
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-ESPTOOL = os.path.join(SCRIPT_DIR, "esptool", "esptool.py")
+ESPTOOL_CMD = [sys.executable, os.path.join(SCRIPT_DIR, "esptool", "esptool.py")]
 
 FIRMWARES = {
     "1": ("Xiaozhi", "Xiaozhi.bin"),
@@ -35,8 +34,8 @@ def find_port():
 
 
 def run_esptool(args, capture=False):
-    """Run esptool with auto-detected or specified port."""
-    cmd = [sys.executable, ESPTOOL] + args
+    """Run esptool with the configured command prefix."""
+    cmd = ESPTOOL_CMD + args
     if capture:
         return subprocess.run(cmd, capture_output=True, text=True)
     return subprocess.run(cmd)
@@ -50,7 +49,7 @@ def detect_chip(port):
 
 def erase_flash(port):
     print(f"\n🗑️  Erasing flash on {port}...")
-    result = run_esptool(["--port", port, "--chip", "esp32s3", "erase-flash"])
+    result = run_esptool(["--port", port, "--chip", "esp32s3", "erase_flash"])
     return result.returncode == 0
 
 
@@ -60,7 +59,7 @@ def write_flash(port, firmware_path):
         "--port", port,
         "--chip", "esp32s3",
         "--baud", "460800",
-        "write-flash", "-z", "0x0",
+        "write_flash", "-z", "0x0",
         firmware_path,
     ])
     return result.returncode == 0
@@ -71,17 +70,16 @@ def main():
     print("  LAFVIN ESP32-S3 AI Chatbot Flash Tool")
     print("=" * 50)
 
-    # Check esptool exists
-    if not os.path.exists(ESPTOOL):
-        # Try system esptool
+    # Check esptool availability
+    if not os.path.exists(ESPTOOL_CMD[1]):
+        # Try system esptool (python -m esptool)
         result = subprocess.run(
             [sys.executable, "-m", "esptool", "--version"],
-            capture_output=True, text=True,
+            capture_output=True, text=True
         )
         if result.returncode == 0:
-            # Use module version
-            global ESPTOOL
-            ESPTOOL = None
+            # Switch to module invocation (modify in-place, no 'global' needed)
+            ESPTOOL_CMD[:] = [sys.executable, "-m", "esptool"]
         else:
             print("\n❌ esptool not found!")
             print("   Install with: pip install esptool")
@@ -91,7 +89,10 @@ def main():
     print("\nSelect firmware:")
     for key, (name, _) in FIRMWARES.items():
         fw_path = os.path.join(SCRIPT_DIR, FIRMWARES[key][1])
-        size = f"{os.path.getsize(fw_path) // 1024 // 1024}MB" if os.path.exists(fw_path) else "missing"
+        if os.path.exists(fw_path):
+            size = f"{os.path.getsize(fw_path) // 1024 // 1024}MB"
+        else:
+            size = "missing"
         print(f"  {key}. {name} ({size})")
 
     choice = input("\nEnter choice (1 or 2): ").strip()
@@ -127,14 +128,14 @@ def main():
         port = ports[0]
         print(f"\n✅ Found port: {port}")
     else:
-        print(f"\nMultiple ports found:")
+        print("\nMultiple ports found:")
         for i, p in enumerate(ports):
             print(f"  {i+1}. {p}")
         idx = input("Select port (1): ").strip() or "1"
         port = ports[int(idx) - 1]
 
     # Flash
-    print(f"\n🚀 Starting flash...")
+    print("\n🚀 Starting flash...")
     if not erase_flash(port):
         print("\n❌ Erase failed! Check BOOT mode and try again.")
         sys.exit(1)
